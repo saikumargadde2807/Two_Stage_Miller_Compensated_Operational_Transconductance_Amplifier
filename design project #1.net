@@ -1,0 +1,27 @@
+* C:\Users\gsk28\Downloads\design project #1.asc
+M1 N002 Vo N005 0 CMOSN l=ln w=11.8197u
+M2 N003 inp N005 0 CMOSN l=ln w=11.8197u
+M3 N002 N002 N001 N001 CMOSP l=lp w=5.4169u
+M4 N003 N002 N001 N001 CMOSP l=lp w=5.4169u
+Mo N005 N006 0 0 CMOSN l=2200n w=180.7854u
+M5 Vo N003 N001 N001 CMOSP l=lp w=132.4215u
+I1 N001 N006 0.1µ
+M6 N006 N006 0 0 CMOSN l=2200n w=0.24u
+M7 Vo N006 0 0 CMOSN l=2200n w=2209.70499u
+V1 N001 0 1.8
+Cc P001 N003 2.5p
+Rc Vo P001 140.311 tol=1 pwr=0.1
+Cl Vo N004 5p
+Rl Vo N004 10k
+V4 N004 0 0.9
+V2 inp N007 AC 1
+V3 N007 0 0.9
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\gsk28\AppData\Local\LTspice\lib\cmp\standard.mos
+.lib C:\Users\Dell\Downloads\ibm018.lib
+.param ln=360n
+.param lp=290n
+.ac dec 100 10 100000000
+.backanno
+.end
